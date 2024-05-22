@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.7",
+    "@grpc/proto-loader": "^0.7.13",
+    "google-protobuf": "^3.21.2",
+    "groq": "^3.42.0",
+    "groq-sdk": "^0.3.3",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "path": "^0.12.7",
+    "proto-tools": "^1.3.0",
+    "ts-proto": "^1.176.0"
+  },
+  "name": "grpc",
+  "version": "1.0.0",
+  "description": "Microservicios con grpc",
+  "main": "Cliente.js",
+  "scripts": {
+    "scp": "node Server.js",
+    "generate": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=grpc_js:. --ts_out=grpc_js:. --proto_path=./ analysis.proto",
+    "start": "npm run generate && npm run scp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grpc-tools": "^1.12.4"
+  }
+}

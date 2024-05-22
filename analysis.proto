@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service AnalysisService {
+    rpc chatCompletions (AnalyzeRequest) returns (AnalyzeResponse);
+}
+
+message Tweet {
+    string tweet = 1;
+}
+
+message AnalyzeRequest {
+    repeated Tweet tweets = 1;
+}
+
+message AnalyzeResponse {
+    repeated AnalyzeResponseItem responses = 1;
+}
+
+message AnalyzeResponseItem {
+    string emotion = 1;
+}
