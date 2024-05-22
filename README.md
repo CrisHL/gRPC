@@ -1,7 +1,8 @@
-Instalar dependencias 
+//Instalar dependencias:
 npm install
 
-Ejecutar sevidor
+//Ejecutar sevidor
 npm run start
 
-Ejecutar cliente node Cliente.js
+Ejecutar cliente:
+node Cliente.js
